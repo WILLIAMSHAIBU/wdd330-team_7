@@ -11,7 +11,9 @@ jobs:
         with:
           node-version: '24'
       - run: npm install
+        working-directory: ./
       - run: npm run build
+        working-directory: ./
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
